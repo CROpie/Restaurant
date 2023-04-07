@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+    heading: 0px;
+    box-sizing: border-box;
+}
+
+#header {
+    border: 2px solid black;
+    display: flex;
+}
