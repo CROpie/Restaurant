@@ -1,10 +1,215 @@
+:root {
+    --main-color: blue;
+}
+
+/* common */
+
 * {
     margin: 0px;
-    heading: 0px;
+    padding: 0px 0.5rem;
     box-sizing: border-box;
+    font-family: system-ui;
+}
+
+body {
+    background-color: black;
 }
 
 #header {
-    border: 2px solid black;
     display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+    background-color: black;
+}
+
+.header-button,
+.input-button {
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    padding: 0.5rem;
+}
+
+.header-button:hover,
+.input-button:hover {
+    background-color: rgb(200, 179, 235);
+    color: black;
+}
+
+.header-button {
+    font-size: 1.5rem;
+    width: 15ch;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    font-size: 0.5rem;
+}
+
+.longtext {
+    text-align: justify;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* indexPage */
+
+/* introPage (welcomePage) */
+
+.introPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.introPage > * {
+    color: white;
+}
+
+#logo {
+    height: 206px;
+    width: 206px;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+#info-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    gap: 1rem;
+    width: clamp(500px, 100%, 1000px);
+}
+
+.open-times {
+    white-space: pre-line;
+    font-size: 2rem;
+}
+
+#info-container > * {
+}
+
+.atmosphere-pic {
+    width: max(250px, 100%);
+    margin-bottom: 0.5rem;
+}
+
+/* selectionPage (menuPage) */
+
+.selection-page {
+    color: white;
+}
+
+#selection-title {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#beer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+
+}
+
+#beer-container > *:hover {
+    box-shadow: 0 0 35px 1px var(--main-color);
+    border-radius: 10px;
+}
+
+#beer-container > * {
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0;
+    padding: 0.5rem;
+    gap: 0.5rem;
+
+}
+
+.beer-image {
+    height: 231px;
+    width: 100px;
+}
+
+.beer-title {
+    font-size: 24px;
+    color: var(--main-color);
+
+}
+
+.beer-text {
+    text-align: justify;
+}
+/* contactPage */
+
+.contact-page {
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-title {
+    margin-bottom: 1rem;
+}
+
+#form-container {
+    border: 2px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    flex: 1;
+    width: max(500px, 100%);
+}
+
+.input-div {
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.input-div > * {
+    padding: 0.5rem;
+    width: 90%;
+}
+
+.button-div {
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-button {
+    width: 50%;
+    padding: 0.5rem;
+}
+
+#google-map {
+    margin-bottom: 2rem;
+    max-width: 763px;
+    flex: 1;
+}
+
+.details {
 }
